@@ -1,0 +1,59 @@
+body {
+    background-color: #111216;
+    margin: 0;
+    text-align: center;
+    font-family: "Monsterrat";
+    font-weight: 500;
+    color: white;
+    background-color: #111216;
+}
+
+h1 {
+    background-color: #111216;
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-size: 20px !important;
+    padding: 50px;
+    text-wrap: pretty;
+}
+
+p {
+    text-align: center;
+    font-size: 14px;
+    padding: 50px;
+    text-wrap: pretty;
+}
+
+div {
+    background-color: #313339;
+}
+
+button {
+    border-radius: 8px;
+    background-color: #1f2024;
+    border-color: #2c2e34;
+    border: none;
+    width: 135px;
+    height: 45px;
+}
+
+button:hover {
+    /* Circular */
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-color: #ffffff;
+    /* Cursor that indicates a link */
+    cursor: pointer;
+}
+
+button .github_link {
+    border-radius: 100px;
+    background-color: #111216;
+    border-color: #313339;
+    height: 38px;
+    width: 104px;
+}
+
+link {
+    color: #4169e1;
+}
