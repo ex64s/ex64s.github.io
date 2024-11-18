@@ -16,6 +16,7 @@ h1 {
     font-size: 20px !important;
     padding: 50px;
     text-wrap: pretty;
+    font-weight: bold;
 }
 
 p {
@@ -27,6 +28,16 @@ p {
 
 div {
     background-color: #313339;
+}
+
+/* Basic CSS styling for the sidebar */
+aside {
+    background-color: #111216;
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 button {
@@ -56,4 +67,8 @@ button .github_link {
 
 link {
     color: #4169e1;
+}
+
+.coming-soon {
+    color: #313339;
 }
