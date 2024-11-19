@@ -69,6 +69,12 @@ link {
     color: #4169e1;
 }
 
+li {
+    background-color: #1f2024;
+    width: 135px;
+    height: 45px;
+}
+
 .coming-soon {
     color: #313339;
 }
