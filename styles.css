@@ -1,15 +1,13 @@
 body {
-    background-color: #111216;
+    background-color: #141218 !important;
     margin: 0;
     text-align: center;
-    font-family: "Monsterrat";
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     color: white;
-    background-color: #111216;
 }
 
 h1 {
-    background-color: #111216;
     margin: 0;
     color: white;
     text-align: center;
@@ -27,12 +25,12 @@ p {
 }
 
 div {
-    background-color: #313339;
+    background-color: #2b292f;
 }
 
 /* Basic CSS styling for the sidebar */
 aside {
-    background-color: #111216;
+    background-color: #2b292f;
     width: 200px;
     height: 100%;
     position: fixed;
@@ -41,9 +39,8 @@ aside {
 }
 
 button {
-    border-radius: 8px;
-    background-color: #1f2024;
-    border-color: #2c2e34;
+    border-radius: 5rem;
+    background-color: #ccb6ff;
     border: none;
     width: 135px;
     height: 45px;
@@ -52,17 +49,19 @@ button {
 button:hover {
     /* Circular */
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-    border-color: #ffffff;
     /* Cursor that indicates a link */
     cursor: pointer;
 }
 
-button .github_link {
+button .TA-Project {
     border-radius: 100px;
-    background-color: #111216;
-    border-color: #313339;
-    height: 38px;
-    width: 104px;
+    size: 25px;
+}
+
+.coming-soon {
+    color: #808080;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 link {
@@ -73,8 +72,4 @@ li {
     background-color: #1f2024;
     width: 135px;
     height: 45px;
-}
-
-.coming-soon {
-    color: #313339;
 }

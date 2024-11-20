@@ -1,6 +1,5 @@
 var body = document.body
 
-$(body).fadeIn();
 
 var github_Button = document.getElementsByClassName("github_link");
 var footer = document.getElementsByClassName("footer");
