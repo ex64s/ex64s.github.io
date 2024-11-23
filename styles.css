@@ -10,16 +10,17 @@
     --md-sys-color-primary: #21005d;
     --md-sys-color-surface-container-highest: #f7f2fa;
     --md-sys-scale-button-height: 45px;
-    --md-sys-scale-button-width: 135px
+    --md-sys-scale-button-width: 135px;
+    --md-sys-color-background: #141218;
 }
 
 body {
-    background-color: var(--md-sys-color-primary);
+    background-color: var(--md-sys-color-background);
     margin: 0;
     text-align: center;
     font-family: var(--md-ref-typeface-brand);
     font-weight: bold;
-    color: var(--md-sys-color-container);
+    color: var(--md-sys-color-primary);
 }
 
 h1 {
@@ -87,6 +88,11 @@ button:hover {
 
 .github_link {
     text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-p {
+    color: var(--md-sys-color-primary);
     font-weight: bold;
 }
 
