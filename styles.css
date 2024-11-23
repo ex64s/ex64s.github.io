@@ -9,6 +9,8 @@
     --md-linear-progress-active-indicator-height: 8px;
     --md-sys-color-primary: #21005d;
     --md-sys-color-surface-container-highest: #f7f2fa;
+    --md-sys-scale-button-height: 45px;
+    --md-sys-scale-button-width: 135px
 }
 
 body {
@@ -54,8 +56,9 @@ button {
     border-radius: 5rem;
     background-color: #ccb6ff;
     border: none;
-    width: 135px;
-    height: 45px;
+    width: var(--md-sys-scale-button-width);
+    height: var(--md-sys-scale-button-height);
+    position: relative;
 }
 
 button:hover {
@@ -65,19 +68,26 @@ button:hover {
     cursor: pointer;
 }
 
-button .TA-Project {
+.TA-Project {
     border-radius: 100px;
-    size: 25px;
+    size: 5rem;
+    text-align: center;
+    width: var(--md-sys-scale-button-width);
+    height: var(--md-sys-scale-button-height);
+    background-color: #ccb6ff;
 }
 
 .coming-soon {
     color: #808080;
+    position: relative;
     text-align: center;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
-link {
-    color: #4169e1;
+.github_link {
+    text-decoration: none;
+    font-weight: bold;
 }
 
 li {

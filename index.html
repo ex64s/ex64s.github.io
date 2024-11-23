@@ -28,7 +28,7 @@
 
         document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
     </script>
-    <title>Tower Apocalypse</title>
+    <title>EX64s</title>
 </head>
 
 <body>
@@ -39,19 +39,30 @@
         </h1>
 
         <div></div>
-        <div></div>
 
         <p>
             <!-- (JOSH: PLACE README FILE HERE OR OTHER) -->
         </p>
         <md-divider inset></md-divider>
         <md-filled-button href="https://github.com">Complete</md-filled-button>
+        <md-filled-button class="nav-open">Navigation</md-filled-button>
+
     </main>
     <!-- Navigation bar -->
     <aside class="main-nav">
         <h2>Navigation</h2>
         <ul>
             <section>
+                <style>
+                    :root {
+                        --md-sys-color-outline-variant: #eaddff;
+                        --md-divider-thickness: 2px;
+                    }
+
+                    ::marker {
+                        display: none;
+                    }
+                </style>
                 <li><a href="about:blank">Tower Apocalypse</a></li>
                 <md-divider inset></md-divider>
                 <p class="coming-soon">More Coming Soon!</p>
@@ -65,6 +76,13 @@
     <p class="footer">
         Built using LUAU
         <img class="footer-img" src="/images/logos/luau.png" width="25px" height="25px" alt="Luau logo">
+        <style>
+            .footer-img {
+                width: 25px;
+                height: 25px;
+                position: fixed;
+            }
+        </style>
     </p>
 
 </body>

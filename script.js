@@ -1,14 +1,13 @@
-var body = document.body
+// Main Navigation
 
+const main_nav = document.getElementsByClassName("main-nav")
+const nav_open = document.getElementsByClassName("nav-open")
 
-var github_Button = document.getElementsByClassName("github_link");
-var footer = document.getElementsByClassName("footer");
-var coming_soon = document.getElementsByClassName("coming-soon")
-
-github_Button.addEventListener("click", () => {
-    window.open("https://github.com/", "_blank")
-});
-
-footer.addEventListener("click", () => {
-    window.open("https://luau.org/", "_blank")
-});
+main_nav[0].style.display = "none"
+nav_open[0].addEventListener("click", () => {
+    main_nav[0].style.display = "block"
+    // If its already open, close it
+    if (main_nav[0].style.display == "block") {
+        main_nav[0].style.display = "none"
+    }
+})
