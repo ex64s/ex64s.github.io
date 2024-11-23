@@ -1,15 +1,27 @@
+:root {
+    --md-ref-typeface-brand: 'Open Sans';
+    --md-ref-typeface-plain: 'Open Sans';
+    --md-sys-color-primary: #f7f2fa;
+    --md-sys-color-secondary: #65558f;
+    --md-sys-color-container: #21005d;
+    --md-linear-progress-track-height: 8px;
+    --md-linear-progress-track-shape: 8px;
+    --md-linear-progress-active-indicator-height: 8px;
+    --md-sys-color-primary: #21005d;
+    --md-sys-color-surface-container-highest: #f7f2fa;
+}
+
 body {
-    background-color: #141218 !important;
+    background-color: var(--md-sys-color-primary);
     margin: 0;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--md-ref-typeface-brand);
     font-weight: 500;
-    color: white;
+    color: var(--md-sys-color-container);
 }
 
 h1 {
     margin: 0;
-    color: white;
     text-align: center;
     font-size: 20px !important;
     padding: 50px;
