@@ -11,10 +11,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/images/favicons/favicon.ico">
     <!-- Replace this w/ the path of your icon. -->
     <!-- Pull Google Material Design -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <script type="importmap">
         {
           "imports": {
@@ -28,42 +28,127 @@
 
         document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
     </script>
+
+    <!-- Loading CSS -->
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Semi-transparent background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader {
+            border: 16px solid #f3f3f3;
+            /* Light grey */
+            border-top: 16px solid #3498db;
+            /* Blue */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
     <title>EX64s</title>
 </head>
 
 <body>
+    <!-- Loader -->
+    <div class="loader-container">
+        <div class="loader"></div>
+        <div class="loading-progress">
+            <md-circular-progress value="0"></md-circular-progress>
+        </div>
+    </div>
+
+    <script>
+        // Set the loading delay
+        const loadingDelay = 2000; // 2 seconds delay
+
+        // update progress value
+        function updateProgress() {
+            const progressElement = document.querySelector('md-circular-progress');
+            let startTime = Date.now(); // current time
+
+            const interval = setInterval(() => {
+                let elapsedTime = Date.now() - startTime;
+                let progressValue = (elapsedTime / loadingDelay) * 100;
+                progressElement.setAttribute('value', progressValue);
+
+                if (elapsedTime >= loadingDelay) {
+                    clearInterval(interval);
+                    document.querySelector('.loader-container').style.display = 'none'; // :Destroy()
+                }
+            }, 100); // upd every 100ms
+        }
+
+        // Start updating the progress
+        updateProgress();
+    </script>
     <main>
         <!-- Where the main stuff happens -->
         <h1>
             EX64s Productions!
         </h1>
         <div></div>
-    </main>
-    <!-- Navigation bar -->
-    <aside class="main-nav">
-        <h2 class="nav-p">Navigation</h2>
+        <p align="center">
+            Welcome to EX64s Productions! We are a small group of developers who are passionate about creating
+            experiences for people to enjoy. We are currently working on a few projects, but we are always looking for
+            new ideas and projects to work on. If you have an idea for a project, feel free to reach out to us and we
+            can
+            discuss it further. We are always looking for new opportunities to create something amazing!
+
+            <md-divider></md-divider>
+        <h1 align="center">Developers & Contributers</h1>
         <ul>
-            <section>
+            <img src="https://github.com/user-attachments/assets/00b8c155-e80f-47dc-8bbb-90f08f31226a" width="50"
+                height="50">
+            <h1 align="center">
+                BoredDynasty
+            </h1>
+            <h4 align="center">
+                Programmer of 5 years and Minimalist UI Designer
+                </h3>
+                <div></div>
+                <h4 align="center">Major Languages</h4>
 
-            </section>
-
+                <li align="center">
+                    <img align="center"
+                        src="https://github.com/user-attachments/assets/c7acfbab-599f-48ed-8b7a-5b8ec9f34200">
+                </li>
+                <li align="center">
+                    <img align="center"
+                        src="https://github.com/user-attachments/assets/5d71d868-6423-4e00-a835-1dcc5e705278">
+                </li>
+                <li align="center">
+                    <img align="center"
+                        src="https://github.com/user-attachments/assets/fc3bf654-e432-4f97-b340-e38a042516e3">
+                </li>
         </ul>
-    </aside>
-
+        </p>
+    </main>
     <div></div>
-
-    <p class="footer">
-        Built using LUAU
-        <img class="footer-img" src="/images/logos/luau.png" width="25px" height="25px" alt="Luau logo">
-        <style>
-            .footer-img {
-                width: 25px;
-                height: 25px;
-                position: fixed;
-            }
-        </style>
-    </p>
-
 </body>
 
 </html>
